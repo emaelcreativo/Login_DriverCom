@@ -27,11 +27,11 @@ $data = consumoApi($baseUrl, $postData);
 
 if (isset($data['error'])) {
     $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
-    header("Location: ./login.php?error=error"); 
+    header("Location: ../index.php?error=error"); 
     exit();
 } else {
     $_SESSION['datos'] = $data;
-    header("Location: ../modelo/menu.php");
+    header("Location: ../vista/menu.php");
     exit();
 }
 ?>
